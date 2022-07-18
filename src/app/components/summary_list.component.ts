@@ -118,7 +118,7 @@ export class summary_listComponent implements AfterContentChecked {
           key: 'Are you employed full-time and work at least 30 hours per week?',
           value: page.lead.userInfo.employmentStatus,
         },
-        { key: 'Monthly Gross Income', value: page.lead.userInfo.income },
+        { key: 'Monthly Gross Income', value: '$' + page.lead.userInfo.income },
         {
           key: 'Government employee',
           value: page.lead.userInfo.governmentEmployeeStatus,

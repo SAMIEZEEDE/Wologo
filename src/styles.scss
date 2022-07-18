@@ -34,6 +34,11 @@ textarea,
 .mat-option-text {
     font-family: 'Halis R', sans-serif !important;
 }
+.mat-card{
+    right: 0;
+    z-index: 1;
+    top:-5;
+}
 bh-recommendations,bh-samary_card,bh-home,bh-summary_list,bh-register,bh-income,bh-nicotin_status,bh-ocupation,bh-protection_plan,bh-government_emplyee,bh-Gender,bh-employment_status,bh-date_of_birth,bh-residing_state,bh-select_plan{
     width: 100%;
      height: 100%;
@@ -546,3 +551,13 @@ cursor: pointer;
 .mat-datepicker-toggle-active {
     color: #E9651F;
 }
+.mat-dialog-container {
+    padding: 0 !important;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick:hover{
+    color: #E9651F;
+}
+.mat-datepicker-toggle-active {
+    color: #E9651F;
+}
+    

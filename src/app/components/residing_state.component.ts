@@ -110,15 +110,15 @@ export class residing_stateComponent implements AfterContentChecked {
     try {
       const page = this.page;
       page.state = [
-        { view: 'Mpumalanga' },
-        { view: 'Gauteng' },
-        { view: 'Limpopo' },
-        { view: 'Western Cape' },
-        { view: 'Eastern Cape' },
-        { view: 'Northern Cape' },
-        { view: 'North West' },
-        { view: 'Free State' },
-        { view: 'Kwa-Zulu Natal' },
+        { view: 'Alabama' },
+        { view: 'Alaska' },
+        { view: 'American Samoa' },
+        { view: 'California' },
+        { view: 'Colorado' },
+        { view: 'Connecticut' },
+        { view: 'South Dakota' },
+        { view: 'Virgin Islands' },
+        { view: 'Wisconsin' },
       ];
       bh = this.sd_mp6V4MhayTBfFJUy(bh);
       //appendnew_next_sd_EDdTHMAMxsFoecRR

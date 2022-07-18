@@ -120,19 +120,19 @@ export class select_PlanComponent implements AfterContentChecked {
         {
           icon: '/Web/images/1man.png',
           colorIcon: '/Web/images/1man.png',
-          paragraph: 'Accidental Insurance',
+          paragraph: 'Accidental insurance',
           checkedvalue: false,
         },
         {
           icon: '/Web/images/life.png',
           colorIcon: '/Web/images/life.png',
-          paragraph: 'Life Insurance',
+          paragraph: 'Life insurance',
           checkedvalue: false,
         },
         {
           icon: '/Web/images/discount.png',
           colorIcon: '/Web/images/discount.png',
-          paragraph: 'Discount Plans',
+          paragraph: 'Discount plans',
           checkedvalue: false,
         },
       ];

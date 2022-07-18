@@ -96,7 +96,7 @@ export class protection_planComponent implements AfterContentChecked {
     }
   }
 
-  sd_kEltY6xaHq4Xba7t(...others) {
+  dialog(...others) {
     try {
       var bh: any = this.__page_injector__
         .get(SDPageCommonService)
@@ -104,9 +104,23 @@ export class protection_planComponent implements AfterContentChecked {
       bh.input = {};
       bh.local = {};
       bh = this.sd_TTPg9Wx6FZn2ljom(bh);
-      //appendnew_next_sd_kEltY6xaHq4Xba7t
+      //appendnew_next_dialog
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_kEltY6xaHq4Xba7t');
+    }
+  }
+
+  sd_oXFkowFIFtDGAo75(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_2rujfYoUqBruzD06(bh);
+      //appendnew_next_sd_oXFkowFIFtDGAo75
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_oXFkowFIFtDGAo75');
     }
   }
 
@@ -213,6 +227,22 @@ export class protection_planComponent implements AfterContentChecked {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_TTPg9Wx6FZn2ljom');
+    }
+  }
+
+  sd_2rujfYoUqBruzD06(bh) {
+    try {
+      const page = this.page;
+      if (page.showIcon == false) {
+        page.showIcon = true;
+      } else {
+        page.showIcon = false;
+        this.dialog();
+      }
+      //appendnew_next_sd_2rujfYoUqBruzD06
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2rujfYoUqBruzD06');
     }
   }
 
