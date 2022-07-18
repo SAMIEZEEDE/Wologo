@@ -1,0 +1,52 @@
+<div fxLayout="column wrap" class="base bgimg" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" fxFill>
+  <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="container bgwhite" fxFlex="1400px" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="toolbar height70" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="43" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="false" fxShow.xs="true"><img imgSrc="/Web/images/menu.png"></div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="57" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+            <div fxLayout="column wrap" fxFlex="174px" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/images/logo.png"></div>
+            <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+                <mat-icon style="color:white;" *ngIf="page.currentRoute ==&apos;/home/register&apos; || page.currentRoute ==&apos;/home/summary&apos; || page.currentRoute ==&apos;/home/income&apos; || page.currentRoute ==&apos;/home/occupation&apos; || page.currentRoute ==&apos;/home/gender&apos;|| page.currentRoute ==&apos;/home/employment-status&apos; || page.currentRoute ==&apos;/home/government-employee&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/select&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/protection&apos;|| page.currentRoute ==&apos;/home/state&apos; || page.currentRoute ==&apos;/home/date-of-birth&apos;">home</mat-icon><img imgSrc="/Web/images/reload.png" style="padding-left: 25px;" *ngIf="page.currentRoute ==&apos;/home/summary&apos; || page.currentRoute ==&apos;/home/summary-card&apos; || page.currentRoute ==&apos;/home/quotes&apos; || page.currentRoute ==&apos;/home/income&apos; || page.currentRoute ==&apos;/home/occupation&apos; || page.currentRoute ==&apos;/home/gender&apos;|| page.currentRoute ==&apos;/home/employment-status&apos; || page.currentRoute ==&apos;/home/government-employee&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/select&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/protection&apos;|| page.currentRoute ==&apos;/home/state&apos; || page.currentRoute ==&apos;/home/date-of-birth&apos;" (click)="reload()" class="reload">
+                <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center center" [fxShow]="true" fxHide.xs="true">
+                  <div fxLayout="row wrap" class="marginL1em width100" fxLayoutAlign="end center" [fxShow]="true" *ngIf="page.currentRoute===&apos;/home/register&apos;"><img imgSrc="/Web/images/reload.png" style="width:20px" (click)="reload()" class="reload"></div>
+                  <div fxLayout="row wrap" style="padding-right:30px;" class="width100" fxLayoutAlign="start center" [fxShow]="true" *ngIf="page.currentRoute ==&apos;/home/summary&apos; || page.currentRoute ==&apos;/home/income&apos; || page.currentRoute ==&apos;/home/occupation&apos; || page.currentRoute ==&apos;/home/gender&apos;|| page.currentRoute ==&apos;/home/employment-status&apos; || page.currentRoute ==&apos;/home/government-employee&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/select&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/protection&apos;|| page.currentRoute ==&apos;/home/state&apos;|| page.currentRoute ==&apos;/home/date-of-birth&apos;"><button mat-button class="safegardBtn" routerLink="/home/register">
+                      <mat-icon>logout</mat-icon>Login or Register
+                    </button></div>
+                  <div fxLayout="row wrap" class="width100" fxLayoutAlign="space-between center" [fxShow]="page.currentRoute ==&apos;/home/quotes&apos; || page.currentRoute ==&apos;/home/summary-card&apos;"><label>
+                      John Smith</label>
+                    <div fxLayout="column wrap" class="initials" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/initials.png"></div><img imgSrc="/Web/images/downarrow.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" style="position:relative;" class="width100 mainContainer" fxLayoutAlign="center center" [fxShow]="true">
+        <router-outlet></router-outlet>
+      </div>
+      <div fxLayout="row wrap" class="height60 footer" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="page.currentRoute ==&apos;/home/income&apos; || page.currentRoute ==&apos;/home/occupation&apos; || page.currentRoute ==&apos;/home/gender&apos;|| page.currentRoute ==&apos;/home/employment-status&apos; || page.currentRoute ==&apos;/home/government-employee&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/select&apos; || page.currentRoute ==&apos;/home/nicotine&apos;|| page.currentRoute ==&apos;/home/protection&apos;|| page.currentRoute ==&apos;/home/state&apos;|| page.currentRoute ==&apos;/home/date-of-birth&apos;" *ngIf="page.currentRoute==&apos;/home/quotes&apos; || &apos;/home/summary&apos; || &apos;/home/summary-card&apos;"><button mat-button class="backBtn" (click)="back(page.currentRoute)" routerLink="/home/quotes">
+          <mat-icon>arrow_back</mat-icon>Back
+        </button><button mat-button style=" width: 155px;     height: 42px;" class="nextBtn" (click)="display(page.currentRoute)" [disabled]="page.lead.statusCheck==&apos;INVALID&apos;">Next<mat-icon>arrow_forward</mat-icon></button></div>
+      <div fxLayout="row wrap" class="height60 footer" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="page.currentRoute ==&apos;/home/summary&apos;" *ngIf="page.currentRoute==&apos;/home/quotes&apos; || &apos;/home/summary&apos; || &apos;/home/summary-card&apos;"><button mat-button class="backBtn" [disabled]="false" routerLink="/home/nicotine">
+          <mat-icon>arrow_back</mat-icon>Back
+        </button><button mat-button style=" width: 158px;     height: 42px; " class="marginR1em nextBtn" routerLink="/home/register">Check My Price<mat-icon>arrow_forward</mat-icon></button></div>
+      <div fxLayout="row wrap" class="height60 footer" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="page.currentRoute ==&apos;/home/quotes&apos; " *ngIf="page.currentRoute==&apos;/home/quotes&apos; || &apos;/home/summary&apos; || &apos;/home/summary-card&apos;"><button mat-button class="backBtn" routerLink="/home/summary">
+          <mat-icon>arrow_back</mat-icon>Back
+        </button><button mat-button style=" width: 155px;     height: 42px;" class="nextBtn" routerLink="/home/summary-card">Review<mat-icon>arrow_forward</mat-icon></button></div>
+      <div fxLayout="row wrap" class="height60 footer" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="page.currentRoute ==&apos;/home/summary-card&apos;" *ngIf="page.currentRoute==&apos;/home/quotes&apos; || &apos;/home/summary&apos; || &apos;/home/summary-card&apos;"><button mat-button class="backBtn" routerLink="/home/quotes">
+          <mat-icon>arrow_back</mat-icon>Back
+        </button><button mat-button style=" width: 155px;     height: 42px;" class="nextBtn" routerLink="/home/summary-card">Apply Now<mat-icon>arrow_forward</mat-icon></button></div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" style="width:1400px" class="height96" fxLayoutAlign="center center" [fxShow]="page.currentRoute ==&apos;/home/quotes&apos; || page.currentRoute ==&apos;/home/summary-card&apos; || page.currentRoute ==&apos;/home/summary&apos; || page.currentRoute ==&apos;/home/protection&apos;">
+    <div class="disclaimer">
+      <h4>Disclaimer</h4>
+      <p>Woligo is the marketing name of CamSolutions, LLC, an Oklahoma corporation. CamSolutions, LLC is a licensed independent insurance broker. CamSolutions, LLC operates in California as Woligo Insurance Solutions with the California license number (6002977) and is also licensed in Oklahoma (30009078&#x200A;1), Arizona (3000982823), and Texas (2572693). Other state insurance license numbers available on request.<span class="read">Read more<span></span></span></p>
+    </div>
+  </div>
+</div>

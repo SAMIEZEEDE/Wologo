@@ -1,0 +1,92 @@
+<div fxLayout="row wrap" class="marginB3em marginT2em" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" class="marginB3em" fxFlex="80" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="marginT2em" fxLayoutAlign="center center" [fxShow]="true">
+      <h2 style="text-align:center;" class="BLACK">
+        Recommended Options for Disability Insurance
+      </h2>
+    </div>
+    <div fxLayout="row " class="paddingBottom1em width100" fxLayoutAlign="space-evenly center" [fxShow]="true">
+      <div fxLayout="column wrap" style="height: 400px; width: 280px; " class="content" fxLayoutGap="3em" fxLayoutAlign="space-evenly center" [fxShow]="true" *ngFor="let info of page.card" [ngClass]="{&apos;content&apos; :info.buttonvalue===&apos;Choose Plan&apos;, &apos;contentselected&apos;: info.buttonvalue===&apos;Selected&apos;}">
+        <h3>
+          {{info.title}}
+        </h3>
+        <div fxLayout="row wrap" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <p class="align">
+              <span class="number"><span class="doller">$</span>{{info.cost}}</span>/ monthly cost
+            </p>
+            <p class="align">
+              Monthly Benefit Amount:{{info.amount}}<br> Benefit Period:{{info.BenefitPeriod}}<br> Elimination Period: {{info.elemenationPeriod}}</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><button mat-button style="width:225px;" [ngClass]="{&apos;wellBtn&apos; :info.buttonvalue===&apos;Choose Plan&apos;, &apos;wellBtnDisabled&apos;: info.buttonvalue===&apos;Selected&apos;}" (click)="clickedBtn(info.title)">
+              <mat-icon *ngIf="info.buttonvalue===&apos;Selected&apos;">done</mat-icon>{{info.buttonvalue}}
+            </button><label class="orange">
+              Customize</label></div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <h2 style="text-align:center;" class="BLACK">
+        Other products to consider
+      </h2>
+    </div>
+    <div fxLayout="row " class="marginB3em width100" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" style="width: 280px; height:496px;" class="padding2em content" fxLayoutGap="2em" fxLayoutAlign="space-evenly center" [fxShow]="true" [ngClass]="{ &apos;contentselected&apos;: page.checked===&apos;true&apos;}">
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+            <h3>
+              Well-Being<br>
+              Discount Plan</h3>
+            <p style="color: #B9B9C3;">
+              Add your spouse and your<br> dependents (up to age 26) for free</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h4 class="read align">
+              Includes:</h4>
+            <div fxLayout="row " fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true" *ngFor="let item of page.list1"><img imgSrc="/Web/images/Dot.png"><label>
+                {{item}}</label></div>
+            <div fxLayout="row " fxLayoutGap="10px" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-checkbox (change)="checkButton()" [checked]="false"></mat-checkbox>
+              <div>
+                <p><span class="chackspan">$14.95</span>/month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" style="width: 280px; height:496px;" class="padding2em content" fxLayoutGap="2em" fxLayoutAlign="space-evenly center" [fxShow]="true" [ngClass]="{ &apos;contentselected&apos;: page.radio===&apos;true&apos;}">
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+            <h3>
+              Safeguard<br>
+              Discount Plan</h3>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h4 class="read align">
+              Includes:</h4>
+            <div fxLayout="row " fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true" *ngFor="let item of page.list2"><img imgSrc="/Web/images/Dot.png"><label>
+                {{item}}</label></div>
+            <div fxLayout="row " class="paddingRight1em" fxLayoutGap="10px" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-radio-button [required]="false" (change)="radioBtn()" [checked]="false"></mat-radio-button>
+              <div>
+                <p><span class="chackspan">$10.95</span>/month<br>Per Person</p>
+              </div>
+            </div>
+            <div fxLayout="row " class="paddingRight1em" fxLayoutGap="10px" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-radio-button [required]="false" (change)="radioBtn()" [checked]="false"></mat-radio-button>
+              <div>
+                <p><span class="chackspan">$16.95</span>/month<br>Per Family</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

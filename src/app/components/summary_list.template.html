@@ -1,0 +1,63 @@
+<div fxLayout="row wrap" class="marginB3em marginT2em" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" class="marginB3em" fxFlex="80" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="circleGreen">
+          <mat-icon>done</mat-icon>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="greenLine">
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="circleGreen">
+          <mat-icon>done</mat-icon>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div class="greenLineshort">
+          </div>
+          <div class="orangeLine">
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="align circleOrange">
+          3</div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <h2 style="text-align:center;" class="align paddingB1em BLACK">
+        Summary
+      </h2>
+    </div>
+    <div fxLayout="row wrap" class="marginB3em width100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+      <mat-card *ngFor="let label of page.content" class="marginB3em width100">
+        <mat-card-content align="left" class="width100">
+          <div fxLayout="row wrap" style="width: 1068.39px;" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center start" [fxShow]="true">
+              <h4 style="width:300px;">
+                {{label.key}}
+              </h4>
+            </div>
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center start" [fxShow]="true">
+              <div fxLayout="row wrap" class="width100" fxLayoutAlign="space-between center" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <h4 class="read">
+                    <!-- {{label.value}} -->
+
+                    <p *ngIf="label.key !== &apos;Date of birth&apos;" class="blueText">{{label.value}}</p>
+                    <p *ngIf="label.key == &apos;Date of birth&apos;" class="blueText"> {{label.value | date:&apos;shortDate&apos;}}</p>
+                  </h4>
+                </div>
+                <div fxLayout="column wrap" fxFlex="5" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/images/edit.png"></div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

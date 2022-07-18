@@ -1,0 +1,548 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.cdnfonts.com/css/halis-r');
+@import "nDefaults.scss";
+$white:white;
+$orange: #E9651F;
+$blue: #1273A2;
+$green:#28C76F;
+$black:black;
+$lightGrey:#B9B9C3;
+$grey:#BABFC7;
+body,
+p,
+button,
+table,
+.mat-card-title,
+.mat-list-item-content,
+input,
+textarea,
+.mat-form-field,
+.mat-card,
+.mat-content,
+.mat-expansion-panel-body,
+.mat-expansion-panel-content,
+.mat-form-field-label,
+.mat-radio-label-content,
+.mat-tab-label-content,
+.mat-select-value-text,
+.mat-horizontal-stepper-content,
+.mat-tab-group,
+.mat-checkbox-label,
+.mat-simple-snackbar,
+.mat-option-text {
+    font-family: 'Halis R', sans-serif !important;
+}
+bh-recommendations,bh-samary_card,bh-home,bh-summary_list,bh-register,bh-income,bh-nicotin_status,bh-ocupation,bh-protection_plan,bh-government_emplyee,bh-Gender,bh-employment_status,bh-date_of_birth,bh-residing_state,bh-select_plan{
+    width: 100%;
+     height: 100%;
+}
+
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+.orange{
+    color: $orange;
+}
+body{
+    
+    font-weight: 400;
+    font-size: 14px;
+    color: #6E6B7B;
+    $black:black;
+}
+.lightergray{
+    color: #BABFC7;
+}
+
+
+.bgimg{
+    background-image: url('assets/Web/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.base{
+    padding: 15px 120px 10px 120px;
+    
+}
+.bgwhite{
+    background-color: $white;
+}
+.BLACK{
+    color: black;
+}
+.disclaimer{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+text-align: start;
+}
+.height96{
+    height: 69px;
+    margin-top: 10px;
+}
+.toolbar{
+    padding: 0px 30px;
+    border: 1px solid rgba(186, 191, 199, 0.12);
+}
+.container{
+    border-radius: 12px;
+    height: calc(100vh - 121px);
+ width: 1400px;
+}
+.mainContainer{
+   height: calc(100vh - 251px);
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-color: $orange;
+}
+.height70{
+    height: 70px;
+}
+.initials{
+    background: rgba(18, 115, 162, 0.12);
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    
+}
+.backBtn{
+    background: rgba(221, 96, 30, 0.12);
+    border: 1px solid $orange !important;
+    border-radius: 24px !important;
+    color: $orange;
+    width: 117px;
+    height: 42px;
+    .material-icons {
+       font-size: 14px;
+       line-height: 1.5;
+   }
+     
+}
+.height60{
+    height: 60px;
+}
+.padding1em{
+    padding: 1em;
+}
+.nextBtn{
+    background: $orange;
+    border-radius: 24px !important;
+    color: $white;
+    .material-icons {
+       font-size: 14px;
+       line-height: 1.5;
+   }
+}
+.footer{
+    border: 1px solid rgba(186, 191, 199, 0.12);
+    padding: 0px 43px;
+}
+.content{
+    border: 2px solid #BABFC7;
+     border-radius: 6px;
+     padding:1em;
+}
+.width100{
+    width: 100%;
+}
+.wellBtn{
+    background: rgba(221, 96, 30, 0.12);
+    border: 1px solid $orange !important;
+    border-radius: 39px !important;
+// width: 145px !important;
+   height: 27px !important;
+   line-height: 30px !important;
+   text-align: center;
+   padding-bottom: 30px !important;
+   color:$orange;
+   .material-icons {
+       font-size: 14px;
+       line-height: 1.5;
+   }
+   
+}
+.mat-button{
+       font-size: 13px !important;
+   }
+.bodyicon{
+    color:$blue;
+}
+.otherplanDiv{
+    line-height: 1;
+    text-align: end;
+}
+.safegardBtn{
+    background: rgba(221, 96, 30, 0.12);
+    border: 1px solid $orange !important;
+    border-radius: 39px !important;
+   height: 27px !important;
+   line-height: 30px !important;
+   text-align: center;
+   padding-bottom: 30px !important;
+   color:$orange;
+   .material-icons {
+       font-size: 14px;
+       line-height: 1.5;
+   }
+}
+.pointer:hover{
+    cursor: pointer;
+    color: $orange;
+}
+.row:hover{
+    font-weight: bold;
+}
+.Brochure{
+    color:$blue ;
+    text-decoration: $blue underline;
+}
+.borderT{
+    border-top: 2px solid rgba(186, 191, 199, 0.12);
+}
+.borderB{
+  border-bottom: 2px solid rgba(186, 191, 199, 0.12);
+}
+.paddingB1em{
+    padding-bottom: 2em;
+}
+.paddingT2em{
+    padding-top: 1em;
+}
+.paddingBottom1em{
+    padding-bottom:1em ;
+}
+.paddingRight1em{
+    padding-left:1em ;
+}
+.marginR1em{
+    margin-right:3em ;
+}
+.padding2em{
+    padding: 2em !important;
+}
+.marginL1em{
+    margin-left:1em ;
+}
+.marginB3em{
+    margin-bottom: 2em !important;
+}
+.marginT2em{
+    margin-top: 3em;
+}
+.read{
+    color: $blue;
+}
+.marginB1em{
+    margin-bottom: 1em !important;
+}
+
+.align{
+    text-align: center;
+}
+.number{
+font-size: 49px;
+font-weight: 400;
+line-height: 64px;
+letter-spacing: 0px;
+height: 64px;
+width: 43px;
+left: 19px;
+border-radius: nullpx;
+}
+.marginTop1em{
+    margin-top: 1em;
+}
+.doller{
+    font-size:15px;
+  vertical-align: super;
+}
+.chackspan{
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 36px;
+color: #DD601E;
+}
+.marginTB70{
+    margin-top: 72px;
+    margin-bottom: 62px;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $orange;
+  }
+
+  .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        background-color: $orange!important;   /*inner circle color change*/
+  }
+
+.wellBtnDisabled{
+    background: $orange;
+    border: 1px solid $orange !important;
+    border-radius: 39px !important;
+// width: 145px !important;
+   height: 27px !important;
+   line-height: 30px !important;
+   text-align: center;
+   padding-bottom: 30px !important;
+   color:$white;
+  // border: 1px solid #E9651F;
+//border-radius: 10px;
+   .material-icons {
+       font-size: 14px;
+   }
+}
+.contentselected{
+    border: 2px solid $orange;
+     border-radius: 6px;
+     padding:1em;
+     box-shadow: 0px 0px 5px rgba(245, 157, 110, 0.74);
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+     padding: 0 !important;
+    margin: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.2em 0 0.2em 0 !important;
+    margin: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0.75em 0 0.75em;
+    margin-top: -0.25em;
+    margin-bottom: 4.75px;
+    height: 46px;
+}
+.longInput{
+    width: 30em !important;
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0.75em 0 0.75em;
+    margin-top: -0.25em;
+    position: relative;
+}
+}
+.radioG{
+    border: 1px solid #D8D6DE;
+    border-radius: 5px;
+    height: 46px;
+    width: 201px;
+}
+.register{
+  .mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 14.5em !important;
+        height: 41px !important;
+   }
+}
+.marginL6em{
+margin-left: 6em;
+}
+.marginL12em{
+margin-left: 12em;
+}
+.topleftimg{
+    position: absolute;
+    left:0;
+    top:2px;
+}
+.bottomleftimg{
+    position: absolute;
+    left:0;
+    bottom:0;
+    // height: 300px;
+    // width: 200px;
+}
+.toprighttimg{
+    position: absolute;
+    right:0;
+    top:2em;
+}
+.bottomrightimg{
+    position: absolute;
+    right:0;
+    bottom: 2px;
+    height: 272.04632568359375px; 
+}
+.greenLine{
+    height: .5px;
+    background-color: $green;
+    border: .5px solid $green;
+    width: 70px;
+}
+.greenLineshort{
+    height: .5px;
+    background-color: $green;
+    border: .5px solid $green;
+    width: 35px;
+}
+.orangeLine{
+    height: .5px;
+    background-color: $orange;
+    border: .5px solid $orange;
+    width: 35px;
+}
+.grayLine{
+    height: .5px;
+    background-color: $lightGrey;
+    border: .5px solid $lightGrey;
+    width: 35px;
+}
+.circleOrange{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color: $orange;
+    font-size: 20px;
+    color:white;
+    line-height: 1.5;
+}
+.circleGreen{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color: $green;
+    color:white;
+    line-height: 2.6 !important;
+}
+.circleGray{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    border:1px $lightGrey solid;
+    font-size: 20px;
+    color:$lightGrey;
+    line-height: 1.5;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $orange; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $orange; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $orange; 
+}
+.colorWhite{
+    color: $white;
+}
+.marginR198px{
+    margin-right: 198px !important;
+}
+button:disabled{
+   background:rgba(233, 101, 31, 0.65)!important;
+   color:white !important;
+}
+//exports styles
+.topTitle{
+    font-weight:500;
+    // font-size: 18px;
+    line-height: 23.4px;
+    color: $black;
+}
+.selectAllAply{
+    font-weight:400;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: #BABFC7;
+    text-align: center;
+}
+.bodyIcons {
+    height: fit-content !important;
+    width: fit-content !important;
+    font-size: 59px !important;
+    color: $grey;
+}
+.font18{
+    font-size: 18px;
+}
+// .mat-form-field-flex {
+// border: 1px solid $orange; 
+// }
+.dateStyles{
+  .mat-icon-button {
+    color: $orange;
+  }
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $orange;
+    border: 1px solid;
+    border-radius: 5px;
+    //color: rgba(0,0,0,.12);
+  }
+ 
+
+// .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+//     border-color: $orange;
+//     background: $orange;
+// }
+.md-datepicker-input-container {
+    width: 400px;
+}
+.mat-calendar-body-selected {
+    background-color: $orange;
+    color: #fff;
+}
+.mat-option.mat-active {
+    background: $orange !important;
+    color: white !important;
+}
+.select{
+    width: 163px;
+
+}
+.mat-error {
+    margin-top: 19px;
+    margin-left: -10px
+}
+.mat-form-field {
+    width: 350px;
+}
+.mat-select-trigger {
+    height: 1.125em;
+    width: 22em;
+}
+.dialog{
+// height: 220px;
+width: 637px;
+border-radius: 6px;
+
+}
+.diaheader{
+height: 48px;
+width: 635.7448120117188px;
+background: #F8F8F8;
+border-radius: 5px 5px 0px 0px;
+}
+.diafooter{
+Width:638.9px;
+Height:68px;
+background: #FFFFFF;
+mix-blend-mode: normal;
+border-radius: 0px 0px 5px 5px;
+}
+.reload{
+cursor: pointer;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #E9651F;
+}
+.mat-datepicker-toggle-active {
+    color: #E9651F;
+}

@@ -1,0 +1,66 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" class="marginB3em marginT2em" fxFlex="80" fxLayoutGap="1.5em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="marginT2em" fxLayoutAlign="center center" [fxShow]="true">
+      <h2 style="text-align:center;">
+        Summary for Disabilty Insurance</h2>
+    </div>
+    <div fxLayout="row wrap" style="width:503px" class="content" fxLayoutAlign="center start" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="row wrap" class="paddingBottom1em width100" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap="45" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h4 style="text-align:start;">
+              Price Details (Disability)</h4>
+          </div>
+          <div fxLayout="column wrap" fxLayoutGap="45" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h5 style="text-align:end; " class="Brochure">
+              Brochure</h5>
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="paddingBottom1em width100" fxLayoutAlign="space-between center" [fxShow]="true" *ngFor="let label of page.tags">
+          <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start stretch" [fxShow]="true"><label style="font-weight:{{label.weight}}">
+              {{label.name}}</label></div>
+          <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start end" [fxShow]="true"><label style="color:{{label.color}}; font-weight:{{label.weight}}">
+              {{label.price}}</label></div>
+        </div>
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" class="paddingT2em borderT" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h4>
+              Other Plans</h4>
+            <div fxLayout="row wrap" class="marginB3em width100" fxLayoutAlign="space-between center" [fxShow]="true">
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start start" [fxShow]="true"><button mat-button class="wellBtn">
+                  <mat-icon class="bodyicon">help_outline</mat-icon>Well-Being<mat-icon>highlight_off</mat-icon>
+                </button></div>
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start end" [fxShow]="true">
+                <div class="otherplanDiv">
+                  <h5 class="Brochure">Brochure</h5><br>
+                  <p>$14.95 / month</p>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="paddingB1em paddingT2em borderB width100" fxLayoutAlign="space-between center" [fxShow]="true">
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start start" [fxShow]="true"><button mat-button class="safegardBtn">
+                  <mat-icon class="bodyicon">help_outline</mat-icon>Safeguard (Individual Plan)<mat-icon>highlight_off</mat-icon>
+                </button></div>
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start end" [fxShow]="true">
+                <div class="otherplanDiv">
+                  <h5 class="Brochure">Brochure</h5><br>
+                  <p>$16.95 / month</p>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="width100" fxLayoutAlign="space-between center" [fxShow]="true">
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start start" [fxShow]="true">
+                <h5>
+                  Total</h5>
+              </div>
+              <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="start end" [fxShow]="true">
+                <h1 class="otherplanDiv">
+                  $56.90 / month</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="7em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form [formGroup]="page.genderStatus">
+      <div fxLayout="column wrap" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="marginTop1em" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" class="paddingT2em" fxLayoutAlign="center center" [fxShow]="true">
+            <p class="selectAllAply">
+              Selected plan</p>
+            <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <h6 class="font18 topTitle">
+                Disability Insurance</h6><img imgSrc="/Web/images/selectedEdit.png">
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="height:85px;" class="width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/stepper1.png"><img imgSrc="/Web/images/stepper2.png"><img imgSrc="/Web/images/stepper3.png"></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+            <h2 class="topTitle">
+              What is your gender at birth?</h2>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <mat-radio-group [value]="gender" class="width100" formControlName="gender" [required]="false">
+            <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+              <div fxLayout="column wrap" fxFlex="130px" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/selectedMale.png" *ngIf="page.male"><img imgSrc="/Web/images/male1.png" *ngIf="!page.male"><label [ngClass]="{&apos;orange&apos; :page.male}">
+                  Male</label>
+                <mat-radio-button [value]="&apos;male&apos;" [required]="false" name="male" (change)="changingMale(page.male )"></mat-radio-button>
+              </div>
+              <div fxLayout="column wrap" fxFlex="130px" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/selectedFemale.png" style="width:28px;height:px34" *ngIf="page.female"><img imgSrc="/Web/images/female1.png" style="width:28px;height:px34" *ngIf="!page.female"><label [ngClass]="{&apos;orange&apos; :page.female}">
+                  Female</label>
+                <mat-radio-button [value]="&apos;female&apos;" [required]="false" name="female" (change)="changingFemale(page.female)"></mat-radio-button>
+              </div>
+            </div>
+          </mat-radio-group>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="page.female">
+          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+            <h2 class="align topTitle">
+              Are you looking for maternity leave coverage?</h2>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-radio-group formControlName="matenity" [required]="false">
+                <div fxLayout="column wrap" style="margin-left: 6px;" fxFlex="130px" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><label [ngClass]="{&apos;orange&apos; :page.yes}" class="align">
+                    Yes</label>
+                  <mat-radio-button [value]="&apos;yes&apos;" [required]="false" name="yes" (change)="yes()"></mat-radio-button>
+                </div>
+                <div fxLayout="column wrap" fxFlex="130px" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><label [ngClass]="{&apos;orange&apos; :page.no}" class="align">
+                    No</label>
+                  <mat-radio-button [value]="&apos;NO&apos;" [required]="false" name="no" (change)="no()" [checked]="false"></mat-radio-button>
+                </div>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div fxLayout="row wrap" class="width100" fxFlex="30px" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/notSure.png">
+        <div fxLayout="row wrap" style="margin-bottom:3em !important;" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/text.png"><img imgSrc="/Web/images/help.png"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="4em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form [formGroup]="page.protectionStatus">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="2.5em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" style="height:130px;" class="width100" fxLayoutAlign="center end" [fxShow]="true"><img imgSrc="/Web/images/stepper1.png"><img imgSrc="/Web/images/stepper2.png"><img imgSrc="/Web/images/stepper3.png"></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+            <h2 class="topTitle">
+              How can we help you?</h2>
+            <p class="selectAllAply">
+              Select all that apply</p>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="2.5em" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" style="height:121px;padding-top: 16px;" fxFlex="160px" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/family.png" *ngIf="page.toggle"></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/selectedFamily.png" *ngIf="!page.toggle"></div>
+            <div fxLayout="row " fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true"><label style="height:35px !important" class="align">
+                I need to protect my income or family</label></div>
+            <div fxLayout="row wrap" style="height:30px" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-checkbox name="Protect income or family" (change)="changingIcon(page.toggle)" value="&apos;Protect income or family&apos;" [required]="false" formControlName="protection" (click)="sd_kEltY6xaHq4Xba7t()"></mat-checkbox>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxFlex="160px" fxLayoutAlign="center center" [fxShow]="true" *ngFor="let data of page.protection_plan">
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="{{data.icon}}"></div>
+            <div fxLayout="row " fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true"><label style="height:36px !important" class="align">
+                {{data.paragraph}}</label></div>
+            <div fxLayout="row wrap" style="height:30px" fxLayoutAlign="center center" [fxShow]="true">
+              <mat-checkbox [required]="false"></mat-checkbox>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div fxLayout="row wrap" class="width100" fxFlex="30px" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/notSure.png">
+        <div fxLayout="row wrap" style="margin-bottom:3em !important;" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/text.png"><img imgSrc="/Web/images/help.png"></div>
+      </div>
+    </div>
+  </div>
+</div>

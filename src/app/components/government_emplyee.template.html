@@ -1,0 +1,42 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="6em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form [formGroup]="page.governmentemployeeStatus">
+      <div fxLayout="column wrap" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" class="paddingT2em" fxLayoutAlign="center center" [fxShow]="true">
+            <p class="selectAllAply">
+              Selected plan</p>
+            <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <h6 class="font18 topTitle">
+                Disability Insurance</h6><img imgSrc="/Web/images/selectedEdit.png">
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="height:85px;" class="width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/stepper1.png"><img imgSrc="/Web/images/stepper2.png"><img imgSrc="/Web/images/stepper3.png"></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+            <h2 class="topTitle">
+              Are you a government employee?</h2>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <mat-radio-group [value]="governmentEmployeeStatus" formControlName="governmentemployee" [required]="false">
+            <div fxLayout="column wrap" fxFlex="137px" fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true"><label [ngClass]="{&apos;orange&apos; :page.yes}" class="align">
+                Yes</label>
+              <mat-radio-button [value]="&apos;YES&apos;" [required]="false" name="yes" (change)="yess()"></mat-radio-button>
+            </div>
+            <div fxLayout="column wrap" fxFlex="137px" fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true"><label [ngClass]="{&apos;orange&apos; :page.no}" class="align">
+                No</label>
+              <mat-radio-button [value]="&apos;NO&apos;" [required]="false" name="no" (change)="noo()"></mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
+      </div>
+    </form>
+    <div fxLayout="row wrap" class="width100" fxFlex="30px" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/notSure.png">
+        <div fxLayout="row wrap" style="margin-bottom:3em !important;" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/images/text.png"><img imgSrc="/Web/images/help.png"></div>
+      </div>
+    </div>
+  </div>
+</div>
