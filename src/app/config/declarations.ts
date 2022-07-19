@@ -162,6 +162,7 @@ export const appRoutes = [
       { path: 'state', component: residing_stateComponent },
       { path: 'select', component: select_PlanComponent },
       { path: 'protection', component: protection_planComponent },
+      { path: 'wrap', component: wrapComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

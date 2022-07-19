@@ -13,13 +13,13 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 import {
   FormControl,
   ReactiveFormsModule,
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
-import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -137,11 +137,22 @@ export class select_PlanComponent implements AfterContentChecked {
         },
       ];
       //(checkedvalue) ? "/Web/images/selectedHand.png" : "/Web/images/hand.png"
-      bh = this.sd_ZB65Ev0vBh24K5Wq(bh);
+      bh = this.sd_7rT1g9AXoKbqnERN(bh);
       //appendnew_next_sd_OgI8DThRDeu6E2bU
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_OgI8DThRDeu6E2bU');
+    }
+  }
+
+  sd_7rT1g9AXoKbqnERN(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_ZB65Ev0vBh24K5Wq(bh);
+      //appendnew_next_sd_7rT1g9AXoKbqnERN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7rT1g9AXoKbqnERN');
     }
   }
 
@@ -158,11 +169,24 @@ export class select_PlanComponent implements AfterContentChecked {
 
   sd_LAykWgngsAGfkpic(bh) {
     try {
-      const page = this.page;
-      page.selectPlanStatus = new FormGroup({
-        cb: new FormControl('', [Validators.required]),
-      });
-      console.log('select form', page.selectPlanStatus);
+      const page = this.page; // page.selectPlanStatus = new FormGroup({
+      //     cb: new FormControl('',[Validators.required])
+      //   });
+      //   console.log("select form", page.selectPlanStatus)
+
+      if (page.lead.userInfo.InsuranceType != null) {
+        page.selectPlanStatus = new FormGroup({
+          cb: new FormControl(page.lead.userInfo.InsuranceType, [
+            Validators.required,
+          ]),
+        });
+        page.showIcon = true;
+        this.changingIcon();
+      } else {
+        page.selectPlanStatus = new FormGroup({
+          cb: new FormControl('', [Validators.required]),
+        });
+      }
       //appendnew_next_sd_LAykWgngsAGfkpic
       return bh;
     } catch (e) {

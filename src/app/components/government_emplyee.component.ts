@@ -126,7 +126,7 @@ export class government_emplyeeComponent implements AfterContentChecked {
   sd_pmhcLXpCLFU1zRHs(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_aQ514BTBDa0n9Riw(bh);
+      bh = this.sd_eHRVxGFowsVMFddx(bh);
       //appendnew_next_sd_pmhcLXpCLFU1zRHs
       return bh;
     } catch (e) {
@@ -134,11 +134,25 @@ export class government_emplyeeComponent implements AfterContentChecked {
     }
   }
 
+  sd_eHRVxGFowsVMFddx(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_aQ514BTBDa0n9Riw(bh);
+      //appendnew_next_sd_eHRVxGFowsVMFddx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eHRVxGFowsVMFddx');
+    }
+  }
+
   sd_aQ514BTBDa0n9Riw(bh) {
     try {
       const page = this.page;
       page.governmentemployeeStatus = new FormGroup({
-        governmentemployee: new FormControl('', [Validators.required]),
+        governmentemployee: new FormControl(
+          page.lead.userInfo.governmentEmployeeStatus,
+          [Validators.required]
+        ),
       });
       console.log('governmentemployee form', page.governmentemployeeStatus);
       //appendnew_next_sd_aQ514BTBDa0n9Riw

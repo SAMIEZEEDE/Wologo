@@ -98,11 +98,22 @@ export class residing_stateComponent implements AfterContentChecked {
   sd_icqnYrjGQYm0bJlQ(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_EDdTHMAMxsFoecRR(bh);
+      bh = this.sd_w3Ofpw4Kd96rhI9f(bh);
       //appendnew_next_sd_icqnYrjGQYm0bJlQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_icqnYrjGQYm0bJlQ');
+    }
+  }
+
+  sd_w3Ofpw4Kd96rhI9f(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_EDdTHMAMxsFoecRR(bh);
+      //appendnew_next_sd_w3Ofpw4Kd96rhI9f
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w3Ofpw4Kd96rhI9f');
     }
   }
 
@@ -132,7 +143,9 @@ export class residing_stateComponent implements AfterContentChecked {
     try {
       const page = this.page;
       page.residingState = new FormGroup({
-        residing: new FormControl('', [Validators.required]),
+        residing: new FormControl(page.lead.userInfo.State, [
+          Validators.required,
+        ]),
       });
       console.log('residing form', page.residingState);
       //appendnew_next_sd_mp6V4MhayTBfFJUy

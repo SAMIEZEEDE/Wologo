@@ -1,5 +1,5 @@
 <div fxLayout="row wrap" fxLayoutAlign="center start" [fxShow]="true">
-  <div fxLayout="column wrap" style="height: 39em;" fxFlex="100" fxLayoutGap="10em" fxLayoutAlign="space-between center" [fxShow]="true">
+  <div fxLayout="column wrap" style="height: 39em;" fxFlex="100" fxLayoutGap="7em" fxLayoutAlign="start stretch" [fxShow]="true">
     <form [formGroup]="page.occupationStatus">
       <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="row wrap" class="marginTop1em" fxLayoutAlign="center center" [fxShow]="true">
@@ -20,17 +20,19 @@
           </div>
         </div>
         <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center center" [fxShow]="true">
-          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-            <mat-select formControlName="occupation" placeholder="Select your state" [required]="false">
-              <ng-template ngFor let-option [ngForOf]="page.occupationType" let-i="index">
-                <mat-option [value]="option.view">{{option.view}}</mat-option>
-              </ng-template>
-            </mat-select>
+          <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-select formControlName="occupation" placeholder="Select your state" [required]="false">
+                <ng-template ngFor let-option [ngForOf]="page.occupationType" let-i="index">
+                  <mat-option [value]="option.view">{{option.view}}</mat-option>
+                </ng-template>
+              </mat-select>
 
-          </mat-form-field>
+            </mat-form-field>
+            <div fxLayout="row wrap" style="padding-left: 124px;" fxLayoutGap="1em" fxLayoutAlign="end start" [fxShow]="true"><img imgSrc="/Web/images/ve.png"><label style="font-weight: 400; font-size: 14px;color: #000000;">
+                Can&#x2019;t find your occupation?</label></div>
+          </div>
         </div>
-        <div fxLayout="row wrap" style="padding-right: 53px;" fxLayoutGap="1em" fxLayoutAlign="end start" [fxShow]="true"><img imgSrc="/Web/images/ve.png"><label style="font-weight: 400; font-size: 14px;color: #000000;">
-            Can&#x2019;t find your occupation?</label></div>
       </div>
     </form>
     <div fxLayout="row wrap" class="width100" fxFlex="30px" fxLayoutAlign="center center" [fxShow]="true">

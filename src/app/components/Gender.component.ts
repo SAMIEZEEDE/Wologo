@@ -13,13 +13,13 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 import {
   FormControl,
   ReactiveFormsModule,
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
-import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -145,11 +145,22 @@ export class GenderComponent implements AfterContentChecked {
       this.page.no = false;
       this.page.yes = false;
       this.page.genderStatus = undefined;
-      bh = this.sd_35moPUMguspsbUyf(bh);
+      bh = this.sd_IuMGEoAuAUtYpg1C(bh);
       //appendnew_next_sd_2ESN9dvR6cTAiepo
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2ESN9dvR6cTAiepo');
+    }
+  }
+
+  sd_IuMGEoAuAUtYpg1C(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_35moPUMguspsbUyf(bh);
+      //appendnew_next_sd_IuMGEoAuAUtYpg1C
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IuMGEoAuAUtYpg1C');
     }
   }
 
@@ -168,8 +179,12 @@ export class GenderComponent implements AfterContentChecked {
     try {
       const page = this.page;
       page.genderStatus = new FormGroup({
-        gender: new FormControl('', [Validators.required]),
-        matenity: new FormControl('', [Validators.required]),
+        gender: new FormControl(page.lead.userInfo.genderAtBirth, [
+          Validators.required,
+        ]),
+        matenity: new FormControl(page.lead.userInfo.maternityCoverage, [
+          Validators.required,
+        ]),
       });
       console.log('employment form', page.genderStatus);
       //appendnew_next_sd_XpkP2gRddi2tw3YE
@@ -246,8 +261,14 @@ export class GenderComponent implements AfterContentChecked {
         page.genderStatus.controls.gender.value;
       page.lead.userInfo.maternityCoverage =
         page.genderStatus.controls.matenity.value;
+      console.log('birth', page.lead.userInfo.genderAtBirth);
 
       // console.log('service data', page.lead.userInfo)
+      //setTimeout(()=>{
+      page.genderStatus.patchValue({
+        gender: page.lead.userInfo.genderAtBirth,
+        matenity: page.lead.userInfo.maternityCoverage,
+      });
       //appendnew_next_sd_6V8FOchSjvqzIz0f
       return bh;
     } catch (e) {

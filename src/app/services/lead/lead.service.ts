@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 export class leadService {
  userInfo;
  statusCheck:any;
+ userData =[];
 
     constructor() {
         this.initlead();
@@ -12,15 +13,15 @@ export class leadService {
 
     initlead() {
         this.userInfo = {
-             ProtectionType:'Protect income or family',
-             InsuranceType:'Disability',
-             dateOfBirth:'01/01/1985',
+             ProtectionType:null,
+             InsuranceType:null,
+             dateOfBirth:'',
              genderAtBirth:'Female',
              maternityCoverage:'No',
              State:'Tennessee',
              OccupationCategory:'Artist',
              employmentStatus:'yes',
-             income:'$1,200',
+             income:'1,200',
              governmentEmployeeStatus:'No',
              nicotine:'No'
         }

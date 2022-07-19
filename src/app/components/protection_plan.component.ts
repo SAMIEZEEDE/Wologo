@@ -160,7 +160,7 @@ export class protection_planComponent implements AfterContentChecked {
   sd_sXcPr5plO7FXMlgF(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_I9nkCSMagBQnRdQ4(bh);
+      bh = this.sd_BW0D9TvOUJFcbSgo(bh);
       //appendnew_next_sd_sXcPr5plO7FXMlgF
       return bh;
     } catch (e) {
@@ -168,13 +168,37 @@ export class protection_planComponent implements AfterContentChecked {
     }
   }
 
+  sd_BW0D9TvOUJFcbSgo(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_I9nkCSMagBQnRdQ4(bh);
+      //appendnew_next_sd_BW0D9TvOUJFcbSgo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_BW0D9TvOUJFcbSgo');
+    }
+  }
+
   sd_I9nkCSMagBQnRdQ4(bh) {
     try {
-      const page = this.page;
-      page.protectionStatus = new FormGroup({
-        protection: new FormControl('', [Validators.required]),
-      });
-      console.log('employment form', page.employmentStatus);
+      const page = this.page; // page.protectionStatus = new FormGroup({
+      //     protection: new FormControl('', [Validators.required])
+      //   });
+      //   console.log("employment form", page.employmentStatus)
+
+      if (page.lead.userInfo.ProtectionType != null) {
+        page.protectionStatus = new FormGroup({
+          protection: new FormControl(page.lead.userInfo.ProtectionType, [
+            Validators.required,
+          ]),
+        });
+        page.showIcon = true;
+        this.changingIcon();
+      } else {
+        page.protectionStatus = new FormGroup({
+          protection: new FormControl('', [Validators.required]),
+        });
+      }
       //appendnew_next_sd_I9nkCSMagBQnRdQ4
       return bh;
     } catch (e) {

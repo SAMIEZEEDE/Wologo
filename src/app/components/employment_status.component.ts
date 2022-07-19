@@ -13,13 +13,13 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 import {
   FormControl,
   ReactiveFormsModule,
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
-import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -115,11 +115,22 @@ export class employment_statusComponent implements AfterContentChecked {
       this.page.yes = false;
       this.page.no = false;
       this.page.employmentStatus = undefined;
-      bh = this.sd_0Eo2apBBlPqyxYFo(bh);
+      bh = this.sd_YP2fCFdcoYmnd3Vm(bh);
       //appendnew_next_sd_l1izYIWnNGpvR5JH
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_l1izYIWnNGpvR5JH');
+    }
+  }
+
+  sd_YP2fCFdcoYmnd3Vm(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_0Eo2apBBlPqyxYFo(bh);
+      //appendnew_next_sd_YP2fCFdcoYmnd3Vm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YP2fCFdcoYmnd3Vm');
     }
   }
 
@@ -138,7 +149,9 @@ export class employment_statusComponent implements AfterContentChecked {
     try {
       const page = this.page;
       page.employmentStatus = new FormGroup({
-        employment: new FormControl('', [Validators.required]),
+        employment: new FormControl(page.lead.userInfo.employmentStatus, [
+          Validators.required,
+        ]),
       });
       console.log('employment form', page.employmentStatus);
       //appendnew_next_sd_AYEndm9aGiQ9bBol

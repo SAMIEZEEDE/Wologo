@@ -98,7 +98,7 @@ export class incomeComponent implements AfterContentChecked {
   sd_KrfYVgz6OJtVRafy(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_E5Oq53n2Q5SE5Oj0(bh);
+      bh = this.sd_gU3wxFSQgF15wFg1(bh);
       //appendnew_next_sd_KrfYVgz6OJtVRafy
       return bh;
     } catch (e) {
@@ -106,11 +106,22 @@ export class incomeComponent implements AfterContentChecked {
     }
   }
 
+  sd_gU3wxFSQgF15wFg1(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_E5Oq53n2Q5SE5Oj0(bh);
+      //appendnew_next_sd_gU3wxFSQgF15wFg1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gU3wxFSQgF15wFg1');
+    }
+  }
+
   sd_E5Oq53n2Q5SE5Oj0(bh) {
     try {
       const page = this.page;
       page.incomeStatus = new FormGroup({
-        income: new FormControl('', [
+        income: new FormControl(page.lead.userInfo.income, [
           Validators.required,
           Validators.min(1200),
           Validators.pattern('^(0|[1-9][0-9]*)$'),

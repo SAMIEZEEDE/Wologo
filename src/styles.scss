@@ -284,6 +284,10 @@ color: #DD601E;
   .mat-radio-button.mat-accent .mat-radio-inner-circle {
         background-color: $orange!important;   /*inner circle color change*/
   }
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #E9651F;
+    border-width: 10px;
+}
 
 .wellBtnDisabled{
     background: $orange;
@@ -522,6 +526,11 @@ button:disabled{
 .mat-select-trigger {
     height: 1.125em;
     width: 22em;
+    vertical-align: middle;
+}
+.mat-select-trigger {
+    height: 1.125em;
+    width: 22em;
 }
 .dialog{
 // height: 220px;
@@ -559,5 +568,8 @@ cursor: pointer;
 }
 .mat-datepicker-toggle-active {
     color: #E9651F;
+}
+.mat-select-arrow {
+    margin-top: 9px !important;
 }
     

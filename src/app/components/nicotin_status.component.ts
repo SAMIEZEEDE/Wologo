@@ -126,7 +126,7 @@ export class nicotin_statusComponent implements AfterContentChecked {
   sd_Fseo9aX0XYCMorb7(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_qjCx77WhKdGtcYA3(bh);
+      bh = this.sd_SXP1oCxuP3djpULx(bh);
       //appendnew_next_sd_Fseo9aX0XYCMorb7
       return bh;
     } catch (e) {
@@ -134,11 +134,24 @@ export class nicotin_statusComponent implements AfterContentChecked {
     }
   }
 
+  sd_SXP1oCxuP3djpULx(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_qjCx77WhKdGtcYA3(bh);
+      //appendnew_next_sd_SXP1oCxuP3djpULx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SXP1oCxuP3djpULx');
+    }
+  }
+
   sd_qjCx77WhKdGtcYA3(bh) {
     try {
       const page = this.page;
       page.nicotineStatus = new FormGroup({
-        nicotine: new FormControl('', [Validators.required]),
+        nicotine: new FormControl(page.lead.userInfo.nicotine, [
+          Validators.required,
+        ]),
       });
       console.log('employment form', page.nicotineStatus);
       //appendnew_next_sd_qjCx77WhKdGtcYA3

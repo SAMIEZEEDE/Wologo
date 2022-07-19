@@ -1,33 +1,6 @@
 <div fxLayout="row wrap" class="marginB3em marginT2em" fxLayoutAlign="center center" [fxShow]="true">
   <div fxLayout="column wrap" class="marginB3em" fxFlex="80" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
-    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div class="circleGreen">
-          <mat-icon>done</mat-icon>
-        </div>
-      </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div class="greenLine">
-        </div>
-      </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div class="circleGreen">
-          <mat-icon>done</mat-icon>
-        </div>
-      </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-          <div class="greenLineshort">
-          </div>
-          <div class="orangeLine">
-          </div>
-        </div>
-      </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div class="align circleOrange">
-          3</div>
-      </div>
-    </div>
+    <div fxLayout="row wrap" style="height:130px;" class="width100" fxLayoutAlign="center end" [fxShow]="true"><img imgSrc="/Web/images/c8.png"><img imgSrc="/Web/images/c9.png"><img imgSrc="/Web/images/c10.png"></div>
     <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
       <h2 style="text-align:center;" class="align paddingB1em BLACK">
         Summary
@@ -52,7 +25,7 @@
                     <p *ngIf="label.key == &apos;Date of birth&apos;" class="blueText"> {{label.value | date:&apos;shortDate&apos;}}</p>
                   </h4>
                 </div>
-                <div fxLayout="column wrap" fxFlex="5" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/images/edit.png"></div>
+                <div fxLayout="column wrap" fxFlex="5" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/images/edit.png" routerLink="{{label.routTo}}" class="pointer"></div>
               </div>
             </div>
           </div>

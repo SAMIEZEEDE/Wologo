@@ -97,11 +97,22 @@ export class ocupationComponent implements AfterContentChecked {
   sd_BQYQMcu6GD6ffNAG(bh) {
     try {
       this.page.FG = FormGroup;
-      bh = this.sd_6XtkB56j1JoCk1d0(bh);
+      bh = this.sd_O8aFWK6hdA9gZLOT(bh);
       //appendnew_next_sd_BQYQMcu6GD6ffNAG
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_BQYQMcu6GD6ffNAG');
+    }
+  }
+
+  sd_O8aFWK6hdA9gZLOT(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_6XtkB56j1JoCk1d0(bh);
+      //appendnew_next_sd_O8aFWK6hdA9gZLOT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_O8aFWK6hdA9gZLOT');
     }
   }
 
@@ -132,7 +143,9 @@ export class ocupationComponent implements AfterContentChecked {
     try {
       const page = this.page;
       page.occupationStatus = new FormGroup({
-        occupation: new FormControl('', [Validators.required]),
+        occupation: new FormControl(page.lead.userInfo.OccupationCategory, [
+          Validators.required,
+        ]),
       });
       console.log('occupation form', page.occupationStatus);
       //appendnew_next_sd_f4dUO5ZeQAbmmjnR

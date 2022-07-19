@@ -13,6 +13,7 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 import {
   FormControl,
   ReactiveFormsModule,
@@ -21,7 +22,6 @@ import {
   ValidationErrors,
 } from '@angular/forms'; //_splitter_
 import { NgxAgeValidator } from 'ngx-age-validator'; //_splitter_
-import { leadService } from 'app/services/lead/lead.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -87,11 +87,22 @@ export class date_of_birthComponent implements AfterContentChecked {
   sd_2Rqv9A4uw39YKf51(bh) {
     try {
       this.page.dateOfBirth = undefined;
-      bh = this.sd_yNBbPe6YeWirZZvq(bh);
+      bh = this.sd_2b1cGjmfQdLHi2DK(bh);
       //appendnew_next_sd_2Rqv9A4uw39YKf51
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2Rqv9A4uw39YKf51');
+    }
+  }
+
+  sd_2b1cGjmfQdLHi2DK(bh) {
+    try {
+      this.page.lead = this.__page_injector__.get(leadService);
+      bh = this.sd_yNBbPe6YeWirZZvq(bh);
+      //appendnew_next_sd_2b1cGjmfQdLHi2DK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2b1cGjmfQdLHi2DK');
     }
   }
 
@@ -122,12 +133,16 @@ export class date_of_birthComponent implements AfterContentChecked {
       const page = this.page;
       page.dateOfBirth = new FormGroup({
         // dob: new FormControl('', [Validators.required])
-        dob: new FormControl(null, [
+        dob: new FormControl(page.lead.userInfo.dateOfBirth, [
           NgxAgeValidator(18, 60),
           Validators.required,
         ]),
       });
       console.log('dob form', page.dateOfBirth.controls.dob.value);
+
+      console.log('on init', page.lead.userInfo.dateOfBirth);
+
+      // page.lead.userInfo.dateOfBirth
 
       bh = this.sd_t7VVwlYum2yPPvKf(bh);
       //appendnew_next_sd_IRBhzobjwmq6EQfe

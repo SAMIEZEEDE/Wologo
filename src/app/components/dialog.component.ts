@@ -13,6 +13,7 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -61,14 +62,50 @@ export class dialogComponent {
     }
   }
 
+  sd_fMyLGwCjq0XEKeOv(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_0xA7Yn4oDWdqxChc(bh);
+      //appendnew_next_sd_fMyLGwCjq0XEKeOv
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fMyLGwCjq0XEKeOv');
+    }
+  }
+
   //appendnew_flow_dialogComponent_start
 
   sd_xmstqH8PdqmGpROb(bh) {
     try {
+      bh = this.sd_gSdtZWgdrLBwL3YO(bh);
       //appendnew_next_sd_xmstqH8PdqmGpROb
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_xmstqH8PdqmGpROb');
+    }
+  }
+
+  sd_gSdtZWgdrLBwL3YO(bh) {
+    try {
+      this.page.dialogRef = this.__page_injector__.get(MatDialogRef);
+      //appendnew_next_sd_gSdtZWgdrLBwL3YO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gSdtZWgdrLBwL3YO');
+    }
+  }
+
+  sd_0xA7Yn4oDWdqxChc(bh) {
+    try {
+      const page = this.page;
+      page.dialogRef.close();
+      //appendnew_next_sd_0xA7Yn4oDWdqxChc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0xA7Yn4oDWdqxChc');
     }
   }
 

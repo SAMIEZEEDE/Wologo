@@ -110,6 +110,20 @@ export class homeComponent {
     }
   }
 
+  data(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_489P3gbq6VSMqwds(bh);
+      //appendnew_next_data
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_K2ZTyexAiAmdnf3Q');
+    }
+  }
+
   //appendnew_flow_homeComponent_start
 
   sd_I0bv4wnT6wmPNqZM(bh) {
@@ -306,7 +320,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/date-of-birth');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_hpKzj1m7ZEO2pnJX
       return bh;
     } catch (e) {
@@ -320,7 +336,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/occupation');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_EKzGmn3JwEyjnKap
       return bh;
     } catch (e) {
@@ -334,7 +352,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/employment-status');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_k5oOFBTJNUesvqqX
       return bh;
     } catch (e) {
@@ -348,7 +368,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/summary');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_8fJNyPhqmRQhqTDF
       return bh;
     } catch (e) {
@@ -362,7 +384,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/select');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_Hy8AJainKryCo9im
       return bh;
     } catch (e) {
@@ -376,7 +400,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/gender');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_xlMPPsfpXxNNwYeR
       return bh;
     } catch (e) {
@@ -390,7 +416,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/nicotine');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_SNXxDJntXZmDoWzA
       return bh;
     } catch (e) {
@@ -404,7 +432,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/income');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_L1XXf3uKHyu9Ngsz
       return bh;
     } catch (e) {
@@ -418,7 +448,9 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/government-employee');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_CUByNUtIYbZrLPRY
       return bh;
     } catch (e) {
@@ -545,9 +577,7 @@ export class homeComponent {
         this.sdService.getPathAndQParamsObj('/home/date-of-birth');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_LaeKTpuOzQZQbMF3
       return bh;
     } catch (e) {
@@ -707,6 +737,18 @@ export class homeComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_A74SjeEjuIGcma0S');
+    }
+  }
+
+  sd_489P3gbq6VSMqwds(bh) {
+    try {
+      const page = this.page;
+      page.lead.userData.push(page.lead.userInfo);
+      console.log('data', page.lead.userInfo);
+      //appendnew_next_sd_489P3gbq6VSMqwds
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_489P3gbq6VSMqwds');
     }
   }
 
